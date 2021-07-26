@@ -1,0 +1,119 @@
+html, body, .tamañocien {
+    height: 100%;
+}
+
+body {
+    background-image: linear-gradient(
+        180deg,
+         hsl(273, 75%, 66%),
+         hsl(240, 73%, 65%)
+        );
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; }
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); }
+
+.imagen-container {
+    background-color: white;
+    display: inline-block;
+    border-radius: 15px 0px 0px 15px;
+}
+
+.texto-container {
+    background-color: white;
+    display: inline-block;
+    border-radius: 0px 15px 15px 0px;
+    padding: 15px;
+}
+
+.tarjeta-wrapper {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    grid-template-columns: 40% 55%;
+}
+
+.img-gris {
+    content: url(./images/bg-pattern-desktop.svg);
+    position: absolute;
+    z-index: -1;
+}
+
+
+.img-caja {
+    height: 110px;
+    content: url(./images/illustration-box-desktop.svg);
+    position: absolute;
+    animation-name: caja-translate;
+    animation-iteration-count: infinite;
+    animation-duration: 2000ms;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+
+@keyframes caja-translate {
+    0% {
+        left:250px;
+        top:260px;
+     }
+
+     100% {
+        left:250px;
+        top:230px;
+     }
+
+}
+
+.my-image {
+    content: url(./images/illustration-woman-online-desktop.svg);
+    position: absolute;
+    transform: translateY(-150px);
+    transform: translateX(-70px);
+    width: 350px;
+    
+}
+
+.accordion-button::after {
+    background-image: url(./images/icon-arrow-down.svg) !important;
+}
+
+
+
+
+@media (max-width: 576px) {
+
+
+
+    .tarjeta-wrapper {
+    
+        grid-template-columns: 80% ;
+        grid-template-rows: 20% 50%;
+        margin-right: 50px;
+    }
+
+    .imagen-container {
+        height: 100%;
+        width: 85%;
+        border-radius: 15px 15px 0px 0px;
+        content: url(./images/illustration-woman-online-mobile.svg);
+    }
+
+    .texto-container {
+        border-radius: 0px 0px 15px 15px;
+        width: 85%;
+    }
+
+    .my-image {
+        height: 0px;
+        width: 0px;
+    }
+
+    .img-caja {
+        height: 0px;
+        width: 0px;
+    }
+}
